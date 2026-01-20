@@ -1,4 +1,4 @@
-# Rails Developer Code Sample Project
+# Backend Coding Assignment
 
 ###### Purpose
 
