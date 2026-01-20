@@ -1,6 +1,6 @@
 # Backend Coding Assignment
 
-#### Purpose
+### Purpose
 
 The purpose of this exercize is to give us an example of your work within bounds, guildelines and specifications suppled to you. It provides us some insight into how you work, how you think, and how you build things. It also provides the opportunity for multiple discussion points during an interview. Hopefully this is also fun!
 
