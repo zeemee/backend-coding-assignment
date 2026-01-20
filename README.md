@@ -2,7 +2,7 @@
 
 ### Purpose
 
-The purpose of this exercize is to give us an example of your work within bounds, guildelines and specifications suppled to you. It provides us some insight into how you work, how you think, and how you build things. It also provides the opportunity for multiple discussion points during an interview. Hopefully this is also fun!
+The purpose of this exercise is to give us an example of your work within bounds, guildelines and specifications supplied to you. It provides us some insight into how you work, how you think, and how you build things. It also provides the opportunity for multiple discussion points during an interview. Hopefully this is also fun!
 
 ### The Ask
 
@@ -14,10 +14,9 @@ We would like you to build a rails app that serves a public api. The api consist
 ### Requirements
 
 * You can build this with any version of Rails and Ruby you see fit
-* You can build this with any gems, databases or services you see fit
-* There should be reasonable test coverage
+* You can build this with any gems or services you see fit but we ask that you use SQLite for the database
+* There should be quality test coverage
 * You must use the data provided in the Resources section. How you design things and how you work with that data is up to you.
-* A basic administration interface to modify database records should exist. ActiveAdmin or similar packages are completely fine to use.
 
 ### Specifications
 
@@ -25,13 +24,13 @@ The search endpoint should be defined as follows:
 
 `GET /api/search?index=<number>&limit=<number>&query=<string>`
 
-Paramaters:
+Parameters:
 
 **index**: A numerical index that represents the offset to start returning results from. Default 0.
 
 **limit**: A numerical limit on results to return. Default 10.
 
-**query**: A string to query for results. This should search the **name** of a cocktail recipe inclusively, as in, 'rita' should find 'Margarita'. An empty query string should result in an empty results array.
+**query**: A string to query for results. This should search the **name** of a cocktail recipe inclusively, as in, 'rita' should find 'Margarita'. If this parameter is omitted or blank, an unfiltered list of results should be returned.
 
 The result format should look like this:
 
@@ -51,11 +50,12 @@ The result format should look like this:
 ```
 
 The details endpoint should be defined as follows:
+
 `GET /api/detail?id=<some type of id>`
 
 Parameters:
 
-**id**: This should be an identifier of a cocktail recipe record. I'd assume an int, but if you want to use a UUID string, that's fine too.
+**id**: This should be an identifier for a cocktail recipe record. I'd assume an int, but if you want to use a UUID string, that's fine too.
 
 The result format should look like this:
 
@@ -84,9 +84,9 @@ The result format should look like this:
 
 ### Resources
 
-This project provides two data files for your use to populate your database, [cocktail_recipes.csv](cocktail_recipes.csv) and [cocktail_recipes.json](cocktail_recipes.json). They both contain the same data, but one is a flat structure suited for csv ingestion, the other is a hierarchal json file if you prefer to work with that format.
+This project provides two data files for your use to populate your database, [cocktail_recipes.csv](cocktail_recipes.csv) and [cocktail_recipes.json](cocktail_recipes.json). They both contain the same data, but one is a flat structure suited for CSV ingestion, while the other is a hierarchal JSON file if you prefer to work with that format.
 
-This data was aggregated from the free api at [The Cocktail DB](https://www.thecocktaildb.com), because why can't work be fun? :)
+Credits: This data was aggregated from the free api at [The Cocktail DB](https://www.thecocktaildb.com), because why can't work be fun? :)
 
 ### Submission
 
